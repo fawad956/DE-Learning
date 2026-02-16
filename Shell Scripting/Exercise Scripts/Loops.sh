@@ -45,7 +45,8 @@ LINE_NUM = 1
 while read LINE
 do
     echi "${LINE_NUM}: ${LINE}"
-    ((LINE_NUM++))
+    ((LINE_NUM++))fawad123
+
 done < /etc/fstab
 
 FS_NUM=1
@@ -54,4 +55,21 @@ do
     echo "${FS_NUM}: file system: ${FS}"
     echo "${FS_NUM}: mount point: ${MP}"
     ((FS_NUM++))
+done
+
+**Break statement
+while true
+do
+    read -p "1: show disk usage. 2: show uptime. "CHOICE
+    case "$CHOICE" in
+    1)
+        df -h
+        ;;
+    2}
+        uptime
+        ;;
+    *)
+        break
+        ;;
+    esac
 done
